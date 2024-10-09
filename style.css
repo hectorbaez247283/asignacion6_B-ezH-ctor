@@ -7,12 +7,38 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
+/* Fijar el título en la parte superior */
 h1 {
     text-align: center;
     color: #4CAF50;
-    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pseudo-elemento before para h1 */
+h1::before {
+    content: '🔥 ';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Pseudo-elemento after para h1 */
+h1::after {
+    content: ' 🌀';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 fieldset {
@@ -20,7 +46,98 @@ fieldset {
     border-radius: 10px;
     padding: 20px;
     max-width: 500px;
-    margin: 0 auto;
+    margin-top: 200px; /* Espacio adicional debajo del título */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Resto del código permanece igual */
+
+
+/* Pseudo-elemento first-letter para la primera letra de la descripción del Pokémon */
+#descripcion::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Pseudo-elemento first-line para la primera línea de la descripción del Pokémon */
+#descripcion::first-line {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Pseudo-elemento selection para cuando se selecciona texto en el campo de descripción */
+#descripcion::selection {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Pseudoclase hover para inputs */
+input[type="text"]:hover, input[type="number"]:hover, select:hover, textarea:hover {
+    border-color: #4CAF50;
+}
+
+/* Pseudoclase focus para inputs */
+input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Pseudoclase disabled para inputs */
+input[type="text"]:disabled {
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+/* Pseudoclase active para botones */
+input[type="submit"]:active, input[type="reset"]:active {
+    background-color: #45a049;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 48%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+/* Pseudoclase checked para los radios */
+input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Pseudoclase focus-within para el fieldset */
+fieldset:focus-within {
+    border-color: #45a049;
 }

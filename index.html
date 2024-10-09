@@ -16,19 +16,19 @@
 
         <!-- Nombre del Pokémon -->
         <label for="nombre">Nombre del Pokémon:</label>
-        <input type="text" id="nombre" name="nombre">
+        <input type="text" id="nombre" name="nombre" required>
         <br>
         <br>
 
         <!-- Número en la Pokédex -->
         <label for="numero">Número en la Pokédex:</label>
-        <input type="text" id="numero" name="numero">
+        <input type="number" id="numero" name="numero" min="1" required>
         <br>
         <br>
 
         <!-- Tipo de Pokémon -->
         <label>Tipo de Pokémon:</label><br>
-        <input type="radio" id="fuego" name="tipo" value="fuego">
+        <input type="radio" id="fuego" name="tipo" value="fuego" required>
         <label for="fuego">Fuego</label>
         <br>
 
@@ -47,7 +47,7 @@
 
         <!-- Nivel de evolución -->
         <label for="evolucion">Nivel de evolución:</label>
-        <select id="evolucion" name="evolucion">
+        <select id="evolucion" name="evolucion" required>
             <option value="basico">Básico</option>
             <option value="primera evolución">Primera evolución</option>
             <option value="segunda evolucion">Segunda evolución</option>
@@ -57,7 +57,7 @@
 
         <!-- Nivel de poder -->
         <label for="poder">Nivel de poder:</label>
-        <input type="range" id="poder" name="poder" min="1" max="100"><br><br>
+        <input type="range" id="poder" name="poder" min="1" max="100" value="50"><br><br>
 
         <!-- Descripción del Pokémon -->
         <label for="descripcion">Descripción del Pokémon:</label><br>
@@ -68,7 +68,6 @@
         <!-- Botones -->
         <input type="submit" value="Agregar Pokémon">
         <input type="reset" value="Limpiar formulario">
-
 
     </fieldset>
 
